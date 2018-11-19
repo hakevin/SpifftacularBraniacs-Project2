@@ -1,0 +1,5 @@
+package spiff.brain.models;
+
+public class Goals {
+
+}

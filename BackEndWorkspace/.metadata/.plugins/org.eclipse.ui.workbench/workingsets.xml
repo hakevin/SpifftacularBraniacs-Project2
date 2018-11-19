@@ -8,4 +8,5 @@
 <item elementID="=spifftacular-back-end/src\/test\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=spifftacular-back-end/src\/test\/resources" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1542595593778_2" label="Window Working Set" name="Aggregate for window 1542595593778"/>
 </workingSetManager>

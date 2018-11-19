@@ -1,0 +1,13 @@
+package spiff.brain.models;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class Finances {
+
+	private int id;
+	
+	private double wage;
+	
+	private int userId;
+}

@@ -1,0 +1,25 @@
+package spiff.brain.models;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.Table;
+
+
+@Entity
+@Table(name="finances")
+public class Finances {
+
+	@Id
+	@GeneratedValue(strategy= GenerationType.IDENTITY)
+	private int id;
+	
+	@Column(name="wage")
+	private double wage;
+	
+	@JoinColumn(name="user_id")
+	private int userId;
+}

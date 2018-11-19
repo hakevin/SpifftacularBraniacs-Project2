@@ -1,0 +1,30 @@
+package spiff.brain.models;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="goals")
+public class Goals {
+
+	@Id
+	@GeneratedValue(strategy= GenerationType.IDENTITY)
+	private int id;
+	@Column(name="item")
+	private String itemName;
+	@Column(name="cost")
+	private double cost;
+	@Column(name="achieved_date")
+	private double achievedDate;
+	@Column(name="start_date")
+	private double startDate;
+	@JoinColumn(name="finances_id")
+	private int financeId;
+	@Column(name="deprecated")
+	private boolean deprecated;
+}
