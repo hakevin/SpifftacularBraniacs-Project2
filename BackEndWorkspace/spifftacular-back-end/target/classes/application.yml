@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    username: Spiffy
+    password: Walrus17
+    url: jdbc:postgresql://spiff.cqizwbokhb57.us-east-1.rds.amazonaws.com/spiff
+  jpa:
+    hibernate:
+      ddl-auto: update

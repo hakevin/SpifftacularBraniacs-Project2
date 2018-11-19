@@ -1,0 +1,5 @@
+package spiff.brain.controllers;
+
+public class UserController {
+
+}

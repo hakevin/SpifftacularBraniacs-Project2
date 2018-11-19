@@ -1,0 +1,13 @@
+package spiff.brain.repositories;
+
+import org.springframework.stereotype.Repository;
+
+import spiff.brain.models.User;
+
+@Repository
+public class UserRepository {
+	
+	public void save(User user) {
+		
+	}
+}

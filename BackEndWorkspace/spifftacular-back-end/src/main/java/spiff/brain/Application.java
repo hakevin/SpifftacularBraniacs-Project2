@@ -1,18 +1,10 @@
 package spiff.brain;
 
 import org.apache.log4j.Logger;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
-import org.hibernate.cfg.Configuration;
-import org.hibernate.service.ServiceRegistry;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-
-import spiff.brain.models.Expenditures;
-import spiff.brain.models.Finances;
-import spiff.brain.models.Goals;
-import spiff.brain.models.User;
-
+@SpringBootApplication
 public class Application {
 	
 	//static SessionFactory sf;
@@ -20,36 +12,36 @@ public class Application {
 	
 	
 	public static void main(String[] args)  {
-		SessionFactory factory = new Configuration()
-				.configure("hibernate.cfg.xml")
-				.addAnnotatedClass(User.class)
-				.addAnnotatedClass(Expenditures.class)
-				.addAnnotatedClass(Goals.class)
-				.addAnnotatedClass(Finances.class)
-				.buildSessionFactory();
-		
-		Session session = factory.openSession();
-		
-		log.fatal(factory);
-		try {
-			System.out.println("Creating a new user");
-			User user = new User("skilled","Paul Wall", "Paul", "Wall", "grillz@me.com");
-			
-			session.beginTransaction();
-			
-			System.out.println("saving the user");
-			
-			session.save(user);
-			
-			session.getTransaction().commit();
-			
-			System.out.println("worked!");
-			
-		} finally {
-			factory.close();
-		}
-		
-		
+//		SessionFactory factory = new Configuration()
+//				.configure("hibernate.cfg.xml")
+//				.addAnnotatedClass(User.class)
+//				.addAnnotatedClass(Expenditures.class)
+//				.addAnnotatedClass(Goals.class)
+//				.addAnnotatedClass(Finances.class)
+//				.buildSessionFactory();
+//		
+//		Session session = factory.openSession();
+//		
+//		log.fatal(factory);
+//		try {
+//			System.out.println("Creating a new user");
+//			User user = new User("skilled","Paul Wall", "Paul", "Wall", "grillz@me.com");
+//			
+//			session.beginTransaction();
+//			
+//			System.out.println("saving the user");
+//			
+//			session.save(user);
+//			
+//			session.getTransaction().commit();
+//			
+//			System.out.println("worked!");
+//			
+//		} finally {
+//			factory.close();
+//		}
+//		
+		SpringApplication.run(Application.class, args);
 	}
 	
 	
