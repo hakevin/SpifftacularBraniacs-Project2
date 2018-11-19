@@ -1,0 +1,64 @@
+package spiff.brain;
+
+import org.apache.log4j.Logger;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.service.ServiceRegistry;
+import org.springframework.boot.SpringApplication;
+
+import spiff.brain.models.Expenditures;
+import spiff.brain.models.Finances;
+import spiff.brain.models.Goals;
+import spiff.brain.models.User;
+
+public class Application {
+	
+	static SessionFactory sf;
+	static Logger log = Logger.getRootLogger();
+	
+	
+	public static void main(String[] args) throws Exception {
+		SpringApplication.run(Application.class, args);
+		
+		Session session = sf.openSession();
+		
+		log.fatal(sf);
+		try {
+			System.out.println("Creating a new user");
+			User user = new User("skilled","Paul Wall", "Paul", "Wall", "grillz@me.com");
+			
+			session.beginTransaction();
+			
+			System.out.println("saving the user");
+			
+			session.save(user);
+			
+			session.getTransaction().commit();
+			
+			System.out.println("worked!");
+			
+		} finally {
+			sf.close();
+		}
+		
+		
+	}
+	
+	
+	
+	public static SessionFactory setupSessionFactory() {
+		Configuration configuration = new Configuration()
+				.configure("hibernate.cfg.xml")
+//				.setProperty("hibernate.connection.url", System.getenv("DB_URL"))
+				.addAnnotatedClass(User.class)
+				.addAnnotatedClass(Expenditures.class)
+				.addAnnotatedClass(Goals.class)
+				.addAnnotatedClass(Finances.class);
+		
+		ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
+				.applySettings(configuration.getProperties()).build();
+		return configuration.buildSessionFactory(serviceRegistry);
+	}
+}
