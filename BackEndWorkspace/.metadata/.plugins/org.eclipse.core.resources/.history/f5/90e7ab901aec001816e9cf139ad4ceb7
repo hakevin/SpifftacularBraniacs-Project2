@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    username: Spiffy
+    password: top-secret
+    url: jdbc:postgresql://classdb.chdrd1esgtl4.us-east-2.rds.amazonaws.com/postgres
+  jpa:
+    hibernate:
+      ddl-auto: update

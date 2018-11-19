@@ -1,0 +1,7 @@
+package spiff.brain.controllers;
+
+@Controller
+@RequestMapping("users")
+public class UserController {
+	
+}

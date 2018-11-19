@@ -1254,3 +1254,6 @@ RETURNING *]
 2018-11-18 23:20:11 DEBUG AbstractServiceRegistryImpl:418 - Implicitly destroying ServiceRegistry on de-registration of all child ServiceRegistries
 2018-11-18 23:20:11 INFO  DriverManagerConnectionProviderImpl:233 - HHH10001008: Cleaning up connection pool [jdbc:postgresql://spiff.cqizwbokhb57.us-east-1.rds.amazonaws.com/spiff]
 2018-11-18 23:20:11 DEBUG BootstrapServiceRegistryImpl:295 - Implicitly destroying Boot-strap registry on de-registration of all child ServiceRegistries
+2018-11-19 11:21:18 FATAL Application:33 - org.hibernate.internal.SessionFactoryImpl@b87581
+2018-11-19 11:37:37 FATAL Application:33 - org.hibernate.internal.SessionFactoryImpl@ace111
+2018-11-19 11:38:22 FATAL Application:33 - org.hibernate.internal.SessionFactoryImpl@1a63fe5

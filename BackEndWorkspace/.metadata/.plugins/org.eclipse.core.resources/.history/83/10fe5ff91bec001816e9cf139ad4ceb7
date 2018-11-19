@@ -1,0 +1,43 @@
+package spiff.brain.config;
+
+import javax.sql.DataSource;
+
+import org.apache.tomcat.dbcp.dbcp2.BasicDataSource;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.orm.hibernate5.HibernateTransactionManager;
+import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
+
+@Configuration
+@EnableTransactionManagement
+public class HibernateConfig {
+	@Bean
+	public LocalSessionFactoryBean getSessionFactory() {
+		System.out.println("Configuring Session Factory");
+		LocalSessionFactoryBean factoryBean = new LocalSessionFactoryBean();
+		factoryBean.setConfigLocation(new ClassPathResource("hibernate.cfg.xml"));
+		factoryBean.setAnnotatedClasses(User.class);
+		factoryBean.setDataSource(getDataSource());
+		return factoryBean;
+	}
+	
+	@Bean(name="dataSource")
+	public DataSource getDataSource() {
+		BasicDataSource dataSource = new BasicDataSource();
+		dataSource.setDriverClassName("org.postgresql.Driver");
+		dataSource.setUrl("jdbc:postgresql://classdb.chdrd1esgtl4.us-east-2.rds.amazonaws.com/postgres");
+		dataSource.setUsername("hibernate_role");
+		dataSource.setPassword("top-secret");
+		return dataSource;
+	}
+	
+	@Bean
+	public HibernateTransactionManager getTransactionManager() {
+		System.out.println("Configuring transaction manager");
+		HibernateTransactionManager transactionManager = new HibernateTransactionManager();
+		transactionManager.setSessionFactory(getSessionFactory().getObject());
+		return transactionManager;
+	}
+}
