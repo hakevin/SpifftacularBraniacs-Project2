@@ -6,6 +6,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { InvestmentComponent } from './components/investment/investment.component';
 import { RegisterComponent } from './components/register/register.component';
 import { GoalComponent } from './components/goal/goal.component';
+import { CreateGoalComponent } from './components/create-goal/create-goal.component';
 
 const routes: Routes = [{
   component: LoginComponent,
@@ -22,6 +23,9 @@ const routes: Routes = [{
 }, {
   component: InvestmentComponent,
   path: 'invest'
+}, {
+  component: CreateGoalComponent,
+  path: 'createGoal'
 }];
 
 @NgModule({

@@ -1,4 +1,17 @@
-<app-dashboard></app-dashboard>
 <p>
   investment works!
 </p>
+<div class='container' style="text-align:center">
+  <button (click)="onInvest()">Get Investments</button>
+</div>
+
+<!-- <div *ngFor="let stocks of stockInfo | keyvalue">
+  <h1> {{ this.stockInfo.quote.change }}:{{this.stocks}}</h1>
+</div> -->
+
+<section>
+  <div class="container stockParty">
+    <div class="row" id="stockInfo"></div>
+  </div>
+
+</section>
