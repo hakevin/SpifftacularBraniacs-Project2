@@ -1,3 +1,187 @@
 p {
   text-align: center;
 }
+
+/* .headerImage {
+    background: 100vw;
+} */
+
+/* img {
+    max-width: 100%;
+    height: auto;
+} */
+/*   */
+
+body {
+  background: #232323;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h3 {
+  font-weight: 500;
+  margin: 20px auto;
+  padding: 15px auto;
+  background-color: #232323;
+  width: 20vw;
+  text-align: center;
+  border-radius: 14%;
+  box-shadow: 2px 2px #7C7D7F;
+}
+
+.changeP {
+  color: rgb(153, 119, 6);
+}
+
+.learningStyle {
+  text-align: center;
+  color: #efefef;
+}
+
+div>div>img {
+  border-radius: 5px;
+}
+
+.stockParty {
+  margin-top: 5vh;
+}
+
+#caroselShow {
+  width: 70vw;
+  box-shadow: 2px 2px rgba(222, 222, 222, .7);
+  margin: auto;
+  border: 5px solid rgba(155, 150, 150, 0.7);
+  border-radius: 10px;
+}
+
+
+#stockTicker {
+  width: 100%;
+  background: #232323;
+  /* height: 6vh; */
+  color: #efefef;
+  /* overflow: hidden; */
+}
+
+.jumbotron {
+  /* background-color: rgba(124, 125, 127, .7) */
+}
+
+#stockPresent {
+  overflow: hidden;
+  width: 100vw;
+  height: 6vh;
+  margin: 2px 4px;
+  background: #232323;
+  animation: linear infinite;
+  color: #efefef;
+  overflow: none;
+  animation-delay: 1s;
+  display: inline;
+
+}
+
+.aboveZero {
+  color: rgba(20, 153, 20, 0.952);
+  font-weight: 400;
+}
+
+.belowZero {
+  color: red;
+}
+
+.carousel-caption {
+  color: #efefef;
+  box-shadow: 2px 2px #232323;
+  background-color: rgba(2, 2, 2, .7);
+  border-radius: 9px;
+  /* padding: 4px 5px; */
+}
+
+.tickerClass {
+  list-style: none;
+  display: inline;
+  margin: 4px 3px;
+  padding: 2px 1px;
+  /* overflow: hidden; */
+
+  /* border: 2px solid #efefef; */
+  box-shadow: lightgreen;
+  overflow: hidden;
+  background-color: rgba(62, 62, 64, .7)
+    /* color: #232323; */
+}
+
+
+.cardsStyle {
+  margin: 5px 15px;
+  border: 3px solid green;
+  border-radius: 5%;
+  box-shadow: #efefef;
+}
+
+/* #booksBuy {
+    text-align: center;
+} */
+
+#footerDiv {
+  background-color: #efefef;
+  text-align: center;
+  margin-top: 30vh;
+}
+
+div>a>h3 {
+  background-color: #efefef;
+}
+
+#investFooter {
+  background: #efefef;
+  height: 14vh;
+  width: 100vw;
+  text-align: center;
+}
+
+#stockInfo {
+  color: #efefef;
+}
+
+.card {
+  border: 2px solid rgba(155, 150, 150, 0.7);
+  border-radius: 5%;
+  margin: 15px 15px;
+}
+
+.card-img-top {
+  border: 2px solid rgba(218, 214, 214, 0.7);
+  border-radius: 4%;
+}
+
+.presentationDiv {
+  display: grid;
+  height: 45vh;
+  width: 25vw;
+  background: #efefef;
+  color: #232323;
+  border: 3px solid grey;
+  border-radius: 20px;
+  margin: 15px auto;
+  text-align: center;
+  box-shadow: 2px 6px #7C7D7F;
+  padding-bottom: 15px;
+  padding-top: 8px;
+}
+
+
+.presentationDiv:hover {
+  transition-duration: 150ms;
+  transition-timing-function: ease-in;
+  background-color: #232323;
+  color: #efefef;
+  transform: scale(1.25);
+  box-shadow: 0px 2px #7C7D7F;
+  z-index: 452;
+}
+
+footer {
+  height: 10vh;
+  background-color: #efefef;
+}

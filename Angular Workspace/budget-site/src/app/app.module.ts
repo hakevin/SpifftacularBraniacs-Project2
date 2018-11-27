@@ -8,9 +8,13 @@ import { RegisterComponent } from './components/register/register.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { GoalsComponent } from './components/goals/goals.component';
+
 import { InvestmentComponent } from './components/investment/investment.component';
 import { GoalComponent } from './components/goal/goal.component';
+import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { HttpClientModule } from '@angular/common/http';
+import { InvestmentsService } from './services/investments.service';
+import { CreateGoalComponent } from './components/create-goal/create-goal.component';
 
 @NgModule({
   declarations: [
@@ -19,22 +23,26 @@ import { GoalComponent } from './components/goal/goal.component';
     RegisterComponent,
     DashboardComponent,
     GoalComponent,
-    InvestmentComponent
+    InvestmentComponent,
+    SidenavComponent,
+    CreateGoalComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     NgbModule,
+    HttpClientModule,
     RouterModule.forRoot([
       { path: '', component: LoginComponent },
       { path: 'register', component: RegisterComponent },
       { path: 'dashboard', component: DashboardComponent },
       { path: 'goals', component: GoalComponent },
-      { path: 'invest', component: InvestmentComponent }
+      { path: 'invest', component: InvestmentComponent },
+      { path: 'createGoal', component: CreateGoalComponent }
     ])
   ],
-  providers: [],
+  providers: [InvestmentsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

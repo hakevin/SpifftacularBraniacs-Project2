@@ -1,0 +1,49 @@
+<!-- <div class="container">
+  <form (submit)="onAddPost(postForm)" #postForm="ngForm">
+    <mat-form-field>
+      <input type="text" name="title" ngModel required minlength="3" placeholder="Post Title" #title="ngModel">
+      <mat-error *ngIf="title.invalid">Please enter a post title.</mat-error>
+    </mat-form-field>
+    <mat-form-field> -->
+<!-- <textarea rows="4" name="content" ngModel required placeholder="Post Content" #content="ngModel"></textarea>
+<mat-error *ngIf="content.invalid">Please enter a post title.</mat-error>
+</mat-form-field>
+    <button mat-raised-button color="accent" type="submit">Save Post</button>
+  </form> -->
+<!-- </div> -->
+<div class="container">
+  <div class="formStyle">
+    <form (submit)="onAddPost(goalForm)" #goalForm="ngForm">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Goal Title</label>
+        <input type="text" name="item" ngModel required #item="ngModel" class="form-control" aria-describedby="itemHelp"
+          placeholder="Enter Goal">
+        <small id="itemHelp" class="form-text text-muted">Please enter the goal you'd like to save for</small>
+      </div>
+
+      <div class="input-group mb-3">
+        <label for="cost">Please enter the cost of the goal</label>
+        <div class="input-group-prepend">
+          <span class="input-group-text">$</span>
+        </div>
+        <input type="number" name="cost" ngModel #cost="ngModel" required class="form-control" aria-label="Amount (to the nearest dollar)">
+        <div class="input-group-append">
+          <span class="input-group-text">.00</span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputPassword1">Start Date:</label>
+        <input type="date" name="enteredStartDate" class="form-control" ngModel #enteredStartDate="ngModel">
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputPassword1">Goal Reach Date:</label>
+        <input type="date" name="enteredEndDate" class="form-control" ngModel #enteredEndDate="ngModel">
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+
+</div>
