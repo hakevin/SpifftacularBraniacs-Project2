@@ -1,0 +1,7 @@
+package spiff.brain.controllers;
+
+@RestController
+@RequestMapping("goal")
+public class GoalController {
+	
+}

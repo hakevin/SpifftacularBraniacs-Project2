@@ -1,0 +1,29 @@
+package spiff.brain.repositories;
+
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import spiff.brain.models.Finances;
+
+@Repository
+public class FinanceRepository {
+
+	SessionFactory sf;
+	
+	public void save(Finances finance) {
+		// TODO Auto-generated method stub
+		sf.getCurrentSession().saveOrUpdate(finance);
+	}
+	
+	public Finances getFinanceById(id) {
+		
+	}
+
+	@Autowired
+	public FinanceRepository(SessionFactory sf) {
+		super();
+		this.sf = sf;
+	}
+	
+}

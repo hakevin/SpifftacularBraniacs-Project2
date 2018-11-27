@@ -1,0 +1,51 @@
+package spiff.brain.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import spiff.brain.models.Expenditures;
+import spiff.brain.models.Goals;
+import spiff.brain.repositories.GoalRepository;
+
+@Service
+public class GoalService {
+
+	GoalRepository goalRepository;
+	
+	public void addGoal(Goals goal) {
+		goalRepository.save(goal);
+	}
+
+	@Autowired
+	public GoalService(GoalRepository goalRepository) {
+		super();
+		this.goalRepository = goalRepository;
+	}
+
+	public Goals getGoalById(int id) {
+		return goalRepository.getGoalById(id);
+	}
+
+	public List<Goals> getGoalsByFinanceId(int id) {
+		return goalRepository.getGoalsByFinanceId(id);
+	}
+
+	public void removeGoal(int id) {
+		Goals goal = getGoalById(id);
+		goal.setDeprecated(true);
+		if(goal != null)
+			goalRepository.update(goal);
+	}
+
+	public void updateGoal(Goals goal, int id) {
+		Goals go = getGoalById(id);
+		if(go != null) {
+			go = goal;
+			go.setId(id);
+			goalRepository.update(go);
+		}
+	}
+	
+}

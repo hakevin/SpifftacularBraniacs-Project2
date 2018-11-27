@@ -1,0 +1,12 @@
+package spiff.brain.services;
+
+import spiff.brain.models.Goals;
+
+public class GoalService {
+
+	public void addGoal(Goals goal) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,7 @@
+package spiff.brain.models;
+
+public class FinanceUpdate {
+	private int id;
+	private double wage;
+	
+}

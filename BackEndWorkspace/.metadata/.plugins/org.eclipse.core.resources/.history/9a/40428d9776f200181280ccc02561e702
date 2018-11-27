@@ -1,0 +1,27 @@
+package spiff.brain.repositories;
+
+import java.util.List;
+
+import org.springframework.stereotype.Repository;
+
+import spiff.brain.models.Expenditures;
+
+@Repository
+public class ExpenditureRepository {
+
+	public void addExpenditure(Expenditures expenditure) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public Expenditures getExpenditureById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public List<Expenditures> getExpenditureByFinanceId(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}

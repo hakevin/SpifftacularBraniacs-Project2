@@ -20,9 +20,9 @@ public class Goals {
 	@Column(name="cost")
 	private double cost;
 	@Column(name="achieved_date")
-	private double achievedDate;
+	private String achievedDate;
 	@Column(name="start_date")
-	private double startDate;
+	private String startDate;
 	@JoinColumn(name="finances_id")
 	private int financeId;
 	@Column(name="deprecated")
@@ -45,18 +45,6 @@ public class Goals {
 	public void setCost(double cost) {
 		this.cost = cost;
 	}
-	public double getAchievedDate() {
-		return achievedDate;
-	}
-	public void setAchievedDate(double achievedDate) {
-		this.achievedDate = achievedDate;
-	}
-	public double getStartDate() {
-		return startDate;
-	}
-	public void setStartDate(double startDate) {
-		this.startDate = startDate;
-	}
 	public int getFinanceId() {
 		return financeId;
 	}
@@ -69,21 +57,31 @@ public class Goals {
 	public void setDeprecated(boolean deprecated) {
 		this.deprecated = deprecated;
 	}
+	public String getAchievedDate() {
+		return achievedDate;
+	}
+	public void setAchievedDate(String achievedDate) {
+		this.achievedDate = achievedDate;
+	}
+	public String getStartDate() {
+		return startDate;
+	}
+	public void setStartDate(String startDate) {
+		this.startDate = startDate;
+	}
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
+		result = prime * result + ((achievedDate == null) ? 0 : achievedDate.hashCode());
 		long temp;
-		temp = Double.doubleToLongBits(achievedDate);
-		result = prime * result + (int) (temp ^ (temp >>> 32));
 		temp = Double.doubleToLongBits(cost);
 		result = prime * result + (int) (temp ^ (temp >>> 32));
 		result = prime * result + (deprecated ? 1231 : 1237);
 		result = prime * result + financeId;
 		result = prime * result + id;
 		result = prime * result + ((itemName == null) ? 0 : itemName.hashCode());
-		temp = Double.doubleToLongBits(startDate);
-		result = prime * result + (int) (temp ^ (temp >>> 32));
+		result = prime * result + ((startDate == null) ? 0 : startDate.hashCode());
 		return result;
 	}
 	@Override
@@ -95,7 +93,10 @@ public class Goals {
 		if (getClass() != obj.getClass())
 			return false;
 		Goals other = (Goals) obj;
-		if (Double.doubleToLongBits(achievedDate) != Double.doubleToLongBits(other.achievedDate))
+		if (achievedDate == null) {
+			if (other.achievedDate != null)
+				return false;
+		} else if (!achievedDate.equals(other.achievedDate))
 			return false;
 		if (Double.doubleToLongBits(cost) != Double.doubleToLongBits(other.cost))
 			return false;
@@ -110,18 +111,17 @@ public class Goals {
 				return false;
 		} else if (!itemName.equals(other.itemName))
 			return false;
-		if (Double.doubleToLongBits(startDate) != Double.doubleToLongBits(other.startDate))
+		if (startDate == null) {
+			if (other.startDate != null)
+				return false;
+		} else if (!startDate.equals(other.startDate))
 			return false;
 		return true;
 	}
-	@Override
-	public String toString() {
-		return "Goals [id=" + id + ", itemName=" + itemName + ", cost=" + cost + ", achievedDate=" + achievedDate
-				+ ", startDate=" + startDate + ", financeId=" + financeId + ", deprecated=" + deprecated + "]";
-	}
-	public Goals(String itemName, double cost, double achievedDate, double startDate, int financeId,
+	public Goals(int id, String itemName, double cost, String achievedDate, String startDate, int financeId,
 			boolean deprecated) {
 		super();
+		this.id = id;
 		this.itemName = itemName;
 		this.cost = cost;
 		this.achievedDate = achievedDate;
@@ -132,17 +132,6 @@ public class Goals {
 	public Goals() {
 		super();
 		// TODO Auto-generated constructor stub
-	}
-	public Goals(int id, String itemName, double cost, double achievedDate, double startDate, int financeId,
-			boolean deprecated) {
-		super();
-		this.id = id;
-		this.itemName = itemName;
-		this.cost = cost;
-		this.achievedDate = achievedDate;
-		this.startDate = startDate;
-		this.financeId = financeId;
-		this.deprecated = deprecated;
 	}
 	
 }

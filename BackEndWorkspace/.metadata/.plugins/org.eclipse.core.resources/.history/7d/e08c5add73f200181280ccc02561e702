@@ -1,0 +1,17 @@
+package spiff.brain.services;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class ExpenditureService {
+	
+	ExpenditureRepository expenditureRepository;
+
+	@Autowired
+	public ExpenditureService(ExpenditureRepository expenditureRepository) {
+		super();
+		this.expenditureRepository = expenditureRepository;
+	}
+	
+	
+}

@@ -1,0 +1,12 @@
+package spiff.brain.services;
+
+import spiff.brain.models.Finances;
+
+public class FinanceService {
+
+	public void save(Finances finance) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
