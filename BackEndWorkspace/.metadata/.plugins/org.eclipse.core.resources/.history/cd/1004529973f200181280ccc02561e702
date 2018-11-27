@@ -1,0 +1,5 @@
+package spiff.brain.services;
+
+public class ExpenditureService {
+
+}

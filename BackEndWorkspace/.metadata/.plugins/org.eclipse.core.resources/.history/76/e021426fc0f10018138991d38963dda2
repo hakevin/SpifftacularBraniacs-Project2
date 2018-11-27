@@ -1,0 +1,20 @@
+package spiff.brain.controllers;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import spiff.brain.services.GoalService;
+
+@RestController
+@RequestMapping("goals")
+public class GoalController {
+	
+	GoalService goalService;
+
+	@Autowired
+	public GoalController(GoalService goalService) {
+		super();
+		this.goalService = goalService;
+	}
+	
+}

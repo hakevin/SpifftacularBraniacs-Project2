@@ -1,0 +1,28 @@
+package spiff.brain.services;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import spiff.brain.models.Goals;
+import spiff.brain.repositories.GoalRepository;
+
+@Service
+public class GoalService {
+
+	GoalRepository goalRepository;
+	
+	public void addGoal(Goals goal) {
+		goalRepository.save(goal);
+	}
+
+	@Autowired
+	public GoalService(GoalRepository goalRepository) {
+		super();
+		this.goalRepository = goalRepository;
+	}
+
+	public Goals getGoalById(int id) {
+		return goalRepository.getGoalById(id);
+	}
+	
+}

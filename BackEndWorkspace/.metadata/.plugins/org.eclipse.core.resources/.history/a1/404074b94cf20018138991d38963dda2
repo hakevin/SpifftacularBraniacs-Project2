@@ -1,0 +1,14 @@
+package spiff.brain.services;
+
+import spiff.brain.models.Goals;
+
+public class GoalService {
+
+	GoalRepository goalRepository;
+	
+	
+	public void addGoal(Goals goal) {
+		
+	}
+
+}

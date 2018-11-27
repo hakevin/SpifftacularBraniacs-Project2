@@ -1,0 +1,5 @@
+package spiff.brain.repositories;
+
+public class GoalRepository {
+
+}

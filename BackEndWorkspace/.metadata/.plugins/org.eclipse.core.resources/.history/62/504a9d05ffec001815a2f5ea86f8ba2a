@@ -1,0 +1,19 @@
+package spiff.brain.services;
+
+import spiff.brain.models.Finances;
+
+public class FinanceService {
+
+	FinanceRepository financeRepository;
+	
+	public void save(Finances finance) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public FinanceService(FinanceRepository financeRepository) {
+		super();
+		this.financeRepository = financeRepository;
+	}
+	
+}
