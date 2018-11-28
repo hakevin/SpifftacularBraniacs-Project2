@@ -1,5 +1,5 @@
 export interface Goal {
-  item: string;
+  itemName: string;
   cost: number;
   startDate: string;
   reachedDate: string;

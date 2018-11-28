@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Goal } from 'src/app/models/goal.model';
 import { Subject } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -8,29 +10,37 @@ import { Subject } from 'rxjs';
 export class GoalService {
   private goals: Goal[] = [];
   private goalsUpdated = new Subject<Goal[]>();
+  goal;
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   getGoals() {
-    return [...this.goals];
+    const url = `${environment.server}/goals/finance/3`;
+    this.http.get(url)
+      .subscribe((payload) => {
+        console.log(payload);
+        this.goal = payload;
+        console.log(this.goal);
+        return this.goal;
+      },
+        (error) => console.log(error));
   }
 
-  getPostUpdateListener() {
+  getGoalUpdateListener() {
     return this.goalsUpdated.asObservable();
   }
 
-  addPost(item: string, cost: number, startDate: string, reachedDate: string) {
-    const goal: Goal = {
-      // title: title,
-      // content: content
-      item: item,
-      cost: cost,
-      startDate: startDate,
-      reachedDate: reachedDate
-    };
-
-    this.goals.push(goal);
-    this.goalsUpdated.next([...this.goals]);
-    console.log(goal);
+  addGoal(goal: any) {
+    const url = `${environment.server}/goals`;
+    this.http.post(url, goal)
+      .subscribe((goalInfo) => {
+        console.log(goalInfo);
+        this.goal = goalInfo;
+        console.log(this.goal);
+        return this.goal;
+      },
+        (error) => console.log(error));
   }
+
 }
+

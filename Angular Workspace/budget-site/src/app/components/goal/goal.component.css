@@ -1,3 +1,11 @@
 p {
   text-align: center;
 }
+
+div {
+  margin: auto;
+}
+
+li {
+  text-align: center;
+}
