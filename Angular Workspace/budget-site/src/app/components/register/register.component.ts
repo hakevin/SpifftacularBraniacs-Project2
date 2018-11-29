@@ -25,9 +25,4 @@ export class RegisterComponent implements OnInit {
 
   this.reg.register(creds).subscribe(x => { });
   }
-
-  pageChange() {
-    this.router.navigate(['/', 'users']);
-  }
-
 }
