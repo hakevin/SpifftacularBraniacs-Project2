@@ -1,7 +1,0 @@
-package spiff.brain.controllers;
-
-@RestController
-@RequestMapping("finances")
-public class FinanceController {
-
-}

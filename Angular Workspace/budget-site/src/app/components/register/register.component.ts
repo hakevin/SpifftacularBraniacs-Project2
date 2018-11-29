@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { RegisterService } from 'src/app/services/register.service';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -23,6 +24,9 @@ export class RegisterComponent implements OnInit {
       email: email
     };
 
-  this.reg.register(creds).subscribe(x => { });
+    this.reg.register(creds).subscribe((payload) => {
+      console.log(payload);
+
+    });
   }
 }
