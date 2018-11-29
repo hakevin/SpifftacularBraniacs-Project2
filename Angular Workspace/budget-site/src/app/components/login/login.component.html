@@ -7,20 +7,22 @@
         <!-- xs is a phone -->
         <div class="col-md-4 col-sm-2 col-xs-0"></div>
         <div id="centered-content" class="col-md-4 col-sm-8 col-xs-12">
-          <h1>Reimbursement Login</h1>
-          <label for="username">Username:</label>
-          <input [(ngModel)]="username" type="text" id="username" name="username">
-          <label for="password">Password:</label>
-          <input [(ngModel)]="password" type="password" id="password" name="password">
-          <button (click)="submit()" class="btn btn-primary">Login</button>
+          <div class="logbox">
+            <h1>Budget B' Right</h1>
+            <label for="username">Username:</label>
+            <input [(ngModel)]="username" type="text" id="username" name="username">
+            <label for="password">Password:</label>
+            <input [(ngModel)]="password" type="password" id="password" name="password">
+            <button (click)="submit()" id="blueBttn" class="btn btn-primary btn-lg btn-block">Login</button>
+            <button routerLink="register" class="btn btn-warning btn-lg btn-block">Sign Up</button>
+          </div>
+
         </div>
         <div class="col-md-4 col-sm-2 col-xs-0"></div>
       </div>
     </div>
   </form>
 </section>
-<ol>
-  <li routerLink="/dashboard">User Dashboard</li>
-</ol>
+
 
 <router-outlet></router-outlet>

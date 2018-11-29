@@ -1,16 +1,18 @@
+<app-topnav></app-topnav>
+<app-sidenav></app-sidenav>
 <div *ngFor="let goal of goal">
   <ul>
     <li>
-      <p>Goal: {{ this.goal.itemName}}</p>
+      <p>Goal: {{ this.goal?.itemName}}</p>
     </li>
     <li>
-      <p>{{ this.goal.cost | currency: '$'}}</p>
+      <p>{{ this.goal?.cost | currency: '$'}}</p>
     </li>
     <li>
-      <p>Date started: {{ this.goal.startDate | date}}</p>
+      <p>Date started: {{ this.goal?.startDate | date}}</p>
     </li>
     <li>
-      <p>Date to achieve: {{ this.goal.achievedDate | date}}</p>
+      <p>Date to achieve: {{ this.goal?.achievedDate | date}}</p>
     </li>
   </ul>
 

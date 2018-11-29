@@ -15,15 +15,15 @@ export class RegisterComponent implements OnInit {
   ngOnInit() {
   }
 
-  submit(username, password, firstName, lastName, email) {
+  submit(firstName, lastName, username, email, password) {
     const creds = {
-      username: username,
-      password: password,
       firstName: firstName,
       lastName: lastName,
-      email: email
-    };
+      username: username,
+      email: email,
+      password: password
 
+    };
     this.reg.register(creds).subscribe((payload) => {
       console.log(payload);
 

@@ -1,27 +1,14 @@
-p {
-  text-align: center;
-}
-
-ol {
-  margin: auto;
-}
-
-li {
-  text-align: center;
-}
-
-button {
-  margin: auto;
-  text-align: center;
-}
-
 section {
   min-height: 100vh;
-  background: #223;
+  background: #21663F;
   color: #CCC;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+#blueBttn {
+  margin-top: 2%;
 }
 
 h1 {
@@ -43,4 +30,7 @@ input {
 
 #centered-content {
   margin: 0 auto;
+  background: #222233;
+  padding: 45px;
+  border-radius: 5%;
 }

@@ -1,35 +1,51 @@
-.sideNav {
-  height: 100%;
-  /* Full-height: remove this if you want "auto" height */
-  width: 13%;
-  /* Set the width of the sidebar */
-  position: fixed;
-  /* Fixed Sidebar (stay in place on scroll) */
-  z-index: 78;
-  /* Stay on top */
+.sidebar-nav {
+  position: absolute;
   top: 0;
-  /* Stay at the top */
-  left: 0;
-  background-color: #111;
-  /* Black */
-  overflow-x: hidden;
-  /* Disable horizontal scroll */
-  padding-top: 20px;
-}
-
-.sideNav ul {
+  width: 15vw;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
   list-style: none;
-  padding: 5px;
+  background: #233;
 }
 
-.sideNav li {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
+#fromTop {
+  padding-top: 10vh;
+}
+
+.sidebar-nav li {
+  text-indent: 20px;
+  line-height: 40px;
+}
+
+.sidebar-nav li a {
   display: block;
+  text-decoration: none;
+  color: #999999;
 }
 
-p {
-  text-align: center;
+.sidebar-nav li a:hover {
+  text-decoration: none;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+  text-decoration: none;
+}
+
+.sidebar-nav>.sidebar-brand {
+  height: 65px;
+  font-size: 18px;
+  line-height: 60px;
+}
+
+.sidebar-nav>.sidebar-brand a {
+  color: #999999;
+}
+
+.sidebar-nav>.sidebar-brand a:hover {
+  color: #fff;
+  background: none;
 }

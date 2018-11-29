@@ -15,6 +15,7 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { HttpClientModule } from '@angular/common/http';
 import { InvestmentsService } from './services/investments.service';
 import { CreateGoalComponent } from './components/create-goal/create-goal.component';
+import { TopnavComponent } from './components/topnav/topnav.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { CreateGoalComponent } from './components/create-goal/create-goal.compon
     GoalComponent,
     InvestmentComponent,
     SidenavComponent,
-    CreateGoalComponent
+    CreateGoalComponent,
+    TopnavComponent
   ],
   imports: [
     BrowserModule,

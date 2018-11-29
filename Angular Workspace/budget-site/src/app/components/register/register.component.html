@@ -1,48 +1,54 @@
-<div class="container center_div">
-  <div id="form">
-  <h3>Account Registration</h3>
-  <h5>The following fields are required</h5>
-  
-  <div class="form-row">
-    <div class="form-group col-md-8 col-lg-15">
-      <label for="inputEventCost">First Name</label>
-      <input required type="text" #fname class="form-control" id="firstName" placeholder="Cedric" />
-    </div>
-  </div>
-  
-  <div class="form-row">
-    <div class="form-group col-md-8 col-lg-15">
-      <label for="inputEventCost">Last Name</label>
-      <input required type="text" #lname class="form-control" id="lastName" placeholder="Diggory" />
-    </div>
+<div class="outer">
+
+  <div class="inner">
+    <h1>Account Registration</h1>
+    <hr>
+    <h5>The following fields are required</h5>
   </div>
 
-  <div class="form-row">
-    <div class="form-group col-md-8 col-lg-15">
-      <label for="inputEventCost">Username</label>
-      <input required type="text" #uname class="form-control" id="userName" placeholder="thehulk" />
+  <div class="container center_div">
+    <div id="form">
+      <div class="form-row">
+        <div class="form-group col-md-8 col-lg-15">
+          <label for="inputEventCost">First Name</label>
+          <input required type="text" #fname class="form-control" id="firstName" placeholder="first name" />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-8 col-lg-15">
+          <label for="inputEventCost">Last Name</label>
+          <input required type="text" #lname class="form-control" id="lastName" placeholder="last name" />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-8 col-lg-15">
+          <label for="inputEventCost">Username</label>
+          <input required type="text" #uname class="form-control" id="userName" placeholder="username" />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-8 col-lg-15">
+          <label for="inputEventCost">Email</label>
+          <input required type="email" #email class="form-control" id="email" placeholder="account@email.com" />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-8 col-lg-15">
+          <label for="inputEventCost">Password</label>
+          <input required type="text" #password class="form-control" id="password" placeholder="password" />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-12 col-lg-10 col-xl-8">
+          <button routerLink="" type="submit" class="btn btn-lg btn-primary" (click)="submit(fname.value, lname.value, uname.value, email.value, password.value)"
+            id="submit-new-request">Submit</button>
+        </div>
+      </div>
     </div>
-  </div>
-  
-  <div class="form-row">
-    <div class="form-group col-md-8 col-lg-15">
-      <label for="inputEventCost">Email</label>
-      <input required type="email" #email class="form-control" id="email" placeholder="account@email.com" />
-    </div>
-  </div>
-  
-  <div class="form-row">
-    <div class="form-group col-md-8 col-lg-15">
-      <label for="inputEventCost">Password</label>
-      <input required type="text" #password class="form-control" id="password" placeholder="password" />
-    </div>
-  </div>
-  
-  <div class="form-row">
-    <div class="form-group col-md-12 col-lg-10 col-xl-8">
-      <button routerLink="" type="submit" class="btn btn-lg btn-primary" (click)="submit(fname.value, lname.value, uname.value, email.value, password.value)"
-        id="submit-new-request">Submit</button>
-    </div>
-  </div>
   </div>
 </div>
