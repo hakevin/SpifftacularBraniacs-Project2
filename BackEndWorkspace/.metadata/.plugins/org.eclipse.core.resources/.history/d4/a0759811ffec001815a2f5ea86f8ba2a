@@ -1,6 +1,0 @@
-package spiff.brain.repositories;
-
-@Repository
-public class FinanceRepository {
-
-}

@@ -3,6 +3,7 @@ package spiff.brain.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,11 +17,13 @@ import spiff.brain.models.Finances;
 import spiff.brain.services.FinanceService;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("finances")
 public class FinanceController {
 	
 	FinanceService financeService;
 	
+	@CrossOrigin(origins = "http://localhost:4200")
 	@PostMapping("")
 	public void addFinance(@RequestBody Finances finance) {
 		financeService.save(finance);

@@ -22,6 +22,16 @@ public class UserService {
 		user.setPassword(BCrypt.hashpw(user.getPassword(), BCrypt.gensalt()));
 		 userRepository.save(user);
 	}
+
+	public User checkCredentials(User user) {
+		User userTo = userRepository.getUserByUsername(user.getUsername());
+		if(userTo != null) {
+			if(BCrypt.checkpw(user.getPassword(), userTo.getPassword()))
+					return userTo;
+			} else 
+			return null;
+		return null;
+	}
 	
 	
 }
