@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GoalService } from 'src/app/services/goals/goal.service';
 import { NgForm } from '@angular/forms';
+import { LoginService } from 'src/app/services/login.service';
 
 @Component({
   selector: 'app-create-goal',
@@ -13,7 +14,7 @@ export class CreateGoalComponent implements OnInit {
   startDate = '';
   achievedDate = '';
 
-  constructor(private goalService: GoalService) { }
+  constructor(private goalService: GoalService, private loginService: LoginService) { }
 
   ngOnInit() {
   }
@@ -26,7 +27,8 @@ export class CreateGoalComponent implements OnInit {
       itemName: form.value.item,
       cost: form.value.cost,
       startDate: form.value.enteredStartDate,
-      achievedDate: form.value.enteredEndDate
+      achievedDate: form.value.enteredEndDate,
+      financeId: this.loginService.user.id
     };
 
 

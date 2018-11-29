@@ -29,6 +29,7 @@ public class FinanceController {
 		financeService.save(finance);
 	}
 	
+	@CrossOrigin(origins = "http://localhost:4200")
 	@GetMapping("{id}")
 	public ResponseEntity<Finances> getFinanceById(@PathVariable int id)  {
 		Finances check = financeService.getFinanceById(id);

@@ -23,15 +23,15 @@ export class LoginService {
     const url = `${environment.server}/users/login`;
     this.httpClient.post(url, credentials)
       .subscribe((payload) => {
-        console.log(payload);
+        // console.log(payload);
         this.user = payload;
-        console.log(this.user);
+        // console.log(this.user);
+        this.router.navigateByUrl('/dashboard');
+        // if (this.user.id > 0) {
 
-        if (this.user.id > 0) {
-          this.router.navigateByUrl('/userHome');
-        } else {
-          console.log('please try again');
-        }
+        // } else {
+        //   console.log('please try again');
+        // }
 
         return this.user;
       },
