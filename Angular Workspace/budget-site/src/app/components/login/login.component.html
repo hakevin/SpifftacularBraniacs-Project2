@@ -1,3 +1,15 @@
-<p>
-  login works!
-</p>
+<app-login>
+<div id="loginBox">
+  <div>
+    <label>USERNAME:</label>
+    <input [(ngModel)]="userValue" type="text" id="userIn">
+  </div>
+  <div>
+    <label>PASSWORD:</label>
+    <input [(ngModel)]="passValue" type="password" id="passIn">
+  </div>
+  <div id='button'> 
+    <button (click)="submit()" >Login</button> 
+</div>
+</div>
+</app-login>

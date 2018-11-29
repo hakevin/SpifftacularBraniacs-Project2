@@ -21,4 +21,10 @@ public class UserRepository {
 		super();
 		this.sf = sf;
 	}
+
+	public User GetByUsername(User user) {
+		return user;
+//		return UserRepository.GetByUsername(user);
+
+	}
 }
