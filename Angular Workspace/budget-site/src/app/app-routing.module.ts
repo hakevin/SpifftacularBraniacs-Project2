@@ -15,11 +15,18 @@ const routes: Routes = [{
   path: 'register'
 }, {
   component: DashboardComponent,
-  path: 'dashboard'
-}, {
-  component: FinanceChartComponent,
-  path: 'app-finance-chart'
-},{
+  path: 'dashboard',
+  children: [{
+    component: FinanceChartComponent,
+    path: 'dashboard/app-finance-chart'
+  }]
+  
+},
+//  {
+//   component: FinanceChartComponent,
+//   path: 'app-finance-chart'
+// },
+{
   component: GoalComponent,
   path: 'goals'
 }, {
