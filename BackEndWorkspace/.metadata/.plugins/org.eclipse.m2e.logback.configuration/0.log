@@ -3669,3 +3669,100 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact org.springfra
 2018-11-27 15:56:43,995 [Worker-77: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
 2018-11-27 15:56:43,999 [Worker-77: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2018-11-27 15:56:43,999 [Worker-77: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Bagelpanda\Documents\SpifftacularBrainiacs\BackEndWorkspace\spifftacular-back-end\src\test\resources
+2018-11-27 17:58:11,319 [Worker-20: Building workspace] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: spiff.brain:spifftacular-back-end:0.0.1-SNAPSHOT @ /Users/gregorycotterell/Desktop/SpifftacularBrainiacs/BackEndWorkspace/spifftacular-back-end/pom.xml.
+2018-11-27 17:58:13,389 [Worker-20: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/apache/commons/commons-dbcp2/2.5.0/commons-dbcp2-2.5.0.pom
+2018-11-27 17:58:14,090 [Worker-20: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/milestone/org/apache/commons/commons-dbcp2/2.5.0/commons-dbcp2-2.5.0.pom
+2018-11-27 17:58:14,950 [Worker-20: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/commons/commons-dbcp2/2.5.0/commons-dbcp2-2.5.0.pom
+2018-11-27 17:58:15,130 [Worker-20: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/commons/commons-dbcp2/2.5.0/commons-dbcp2-2.5.0.pom
+2018-11-27 17:58:15,329 [Worker-20: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/apache/commons/commons-pool2/2.6.0/commons-pool2-2.6.0.pom
+2018-11-27 17:58:15,494 [Worker-20: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/milestone/org/apache/commons/commons-pool2/2.6.0/commons-pool2-2.6.0.pom
+2018-11-27 17:58:15,585 [Worker-20: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/commons/commons-pool2/2.6.0/commons-pool2-2.6.0.pom
+2018-11-27 17:58:15,678 [Worker-20: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/commons/commons-pool2/2.6.0/commons-pool2-2.6.0.pom
+2018-11-27 17:58:15,849 [Worker-20: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/mindrot/jbcrypt/0.4/jbcrypt-0.4.pom
+2018-11-27 17:58:16,014 [Worker-20: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/milestone/org/mindrot/jbcrypt/0.4/jbcrypt-0.4.pom
+2018-11-27 17:58:16,102 [Worker-20: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/mindrot/jbcrypt/0.4/jbcrypt-0.4.pom
+2018-11-27 17:58:16,201 [Worker-20: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/mindrot/jbcrypt/0.4/jbcrypt-0.4.pom
+2018-11-27 17:58:16,399 [Worker-20: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/apache/commons/commons-dbcp2/2.5.0/commons-dbcp2-2.5.0.jar
+2018-11-27 17:58:16,646 [Worker-20: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/apache/commons/commons-pool2/2.6.0/commons-pool2-2.6.0.jar
+2018-11-27 17:58:16,892 [Worker-20: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/mindrot/jbcrypt/0.4/jbcrypt-0.4.jar
+2018-11-27 17:58:17,059 [Worker-20: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/milestone/org/apache/commons/commons-dbcp2/2.5.0/commons-dbcp2-2.5.0.jar
+2018-11-27 17:58:17,306 [Worker-20: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/milestone/org/apache/commons/commons-pool2/2.6.0/commons-pool2-2.6.0.jar
+2018-11-27 17:58:17,552 [Worker-20: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/milestone/org/mindrot/jbcrypt/0.4/jbcrypt-0.4.jar
+2018-11-27 17:58:17,645 [Worker-20: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/commons/commons-dbcp2/2.5.0/commons-dbcp2-2.5.0.jar
+2018-11-27 17:58:18,093 [Worker-20: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/commons/commons-dbcp2/2.5.0/commons-dbcp2-2.5.0.jar
+2018-11-27 17:58:18,185 [Worker-20: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/commons/commons-pool2/2.6.0/commons-pool2-2.6.0.jar
+2018-11-27 17:58:18,293 [Worker-20: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/commons/commons-pool2/2.6.0/commons-pool2-2.6.0.jar
+2018-11-27 17:58:18,389 [Worker-20: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/mindrot/jbcrypt/0.4/jbcrypt-0.4.jar
+2018-11-27 17:58:18,481 [Worker-20: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/mindrot/jbcrypt/0.4/jbcrypt-0.4.jar
+2018-11-27 17:58:18,927 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-11-27 17:58:18,933 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-11-27 17:58:18,950 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-11-27 17:58:18,953 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-11-27 17:58:18,953 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/gregorycotterell/Desktop/SpifftacularBrainiacs/BackEndWorkspace/spifftacular-back-end/src/test/resources
+2018-11-27 17:58:21,408 [Worker-0: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/apache/commons/commons-dbcp2/2.5.0/commons-dbcp2-2.5.0-sources.jar
+2018-11-27 17:58:21,822 [Worker-2: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-11-27 17:58:21,826 [Worker-2: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-11-27 17:58:21,829 [Worker-2: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-11-27 17:58:21,838 [Worker-2: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-11-27 17:58:21,839 [Worker-2: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/gregorycotterell/Desktop/SpifftacularBrainiacs/BackEndWorkspace/spifftacular-back-end/src/test/resources
+2018-11-27 17:58:22,107 [Worker-0: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/milestone/org/apache/commons/commons-dbcp2/2.5.0/commons-dbcp2-2.5.0-sources.jar
+2018-11-27 17:58:22,503 [Worker-0: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/commons/commons-dbcp2/2.5.0/commons-dbcp2-2.5.0-sources.jar
+2018-11-27 17:58:22,876 [Worker-0: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/commons/commons-dbcp2/2.5.0/commons-dbcp2-2.5.0-sources.jar
+2018-11-27 17:58:22,895 [Worker-0: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.apache.commons:commons-dbcp2:2.5.0
+2018-11-27 17:58:23,058 [Worker-0: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/apache/commons/commons-pool2/2.6.0/commons-pool2-2.6.0-sources.jar
+2018-11-27 17:58:23,223 [Worker-0: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/milestone/org/apache/commons/commons-pool2/2.6.0/commons-pool2-2.6.0-sources.jar
+2018-11-27 17:58:23,329 [Worker-0: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/commons/commons-pool2/2.6.0/commons-pool2-2.6.0-sources.jar
+2018-11-27 17:58:23,514 [Worker-0: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/commons/commons-pool2/2.6.0/commons-pool2-2.6.0-sources.jar
+2018-11-27 17:58:23,529 [Worker-0: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.apache.commons:commons-pool2:2.6.0
+2018-11-27 17:58:23,692 [Worker-0: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/mindrot/jbcrypt/0.4/jbcrypt-0.4-sources.jar
+2018-11-27 17:58:23,862 [Worker-0: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/milestone/org/mindrot/jbcrypt/0.4/jbcrypt-0.4-sources.jar
+2018-11-27 17:58:23,956 [Worker-0: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/mindrot/jbcrypt/0.4/jbcrypt-0.4-sources.jar
+2018-11-27 17:58:24,045 [Worker-0: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/mindrot/jbcrypt/0.4/jbcrypt-0.4-sources.jar
+2018-11-27 17:58:24,058 [Worker-0: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.mindrot:jbcrypt:0.4
+2018-11-27 17:58:24,416 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-11-27 17:58:24,417 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-11-27 17:58:24,417 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-11-27 17:58:24,419 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-11-27 17:58:24,420 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/gregorycotterell/Desktop/SpifftacularBrainiacs/BackEndWorkspace/spifftacular-back-end/src/test/resources
+2018-11-27 18:29:48,030 [Worker-30: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2018-11-27 18:29:48,737 [Worker-30: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: spiff.brain:spifftacular-back-end:0.0.1-SNAPSHOT @ /Users/gregorycotterell/Desktop/SpifftacularBrainiacs/BackEndWorkspace/spifftacular-back-end/pom.xml.
+2018-11-27 18:29:49,367 [Worker-30: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /spifftacular-back-end/src/main/java
+2018-11-27 18:29:49,367 [Worker-30: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /spifftacular-back-end/src/main/resources
+2018-11-27 18:29:49,368 [Worker-30: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /spifftacular-back-end/src/main/resources
+2018-11-27 18:29:49,368 [Worker-30: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /spifftacular-back-end/src/test/java
+2018-11-27 18:29:49,662 [Worker-30: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 1 sec
+2018-11-27 18:29:53,000 [Worker-29: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-11-27 18:29:53,001 [Worker-29: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-11-27 18:29:53,017 [Worker-29: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-11-27 18:29:53,023 [Worker-29: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-11-27 18:29:53,023 [Worker-29: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/gregorycotterell/Desktop/SpifftacularBrainiacs/BackEndWorkspace/spifftacular-back-end/src/test/resources
+2018-11-27 18:55:50,309 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-11-27 18:55:50,312 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-11-27 18:55:50,313 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-11-27 18:55:50,316 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-11-27 18:55:50,316 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/gregorycotterell/Desktop/SpifftacularBrainiacs/BackEndWorkspace/spifftacular-back-end/src/test/resources
+2018-11-27 21:12:02,446 [Worker-67: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-11-27 21:12:02,447 [Worker-67: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-11-27 21:12:02,449 [Worker-67: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-11-27 21:12:02,451 [Worker-67: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-11-27 21:12:02,451 [Worker-67: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/gregorycotterell/Desktop/SpifftacularBrainiacs/BackEndWorkspace/spifftacular-back-end/src/test/resources
+2018-11-27 22:31:43,019 [Worker-61: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-11-27 22:31:43,021 [Worker-61: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-11-27 22:31:43,023 [Worker-61: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-11-27 22:31:43,026 [Worker-61: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-11-27 22:31:43,026 [Worker-61: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/gregorycotterell/Desktop/SpifftacularBrainiacs/BackEndWorkspace/spifftacular-back-end/src/test/resources
+2018-11-27 22:33:23,448 [Worker-70: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-11-27 22:33:23,449 [Worker-70: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-11-27 22:33:23,450 [Worker-70: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-11-27 22:33:23,452 [Worker-70: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-11-27 22:33:23,452 [Worker-70: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/gregorycotterell/Desktop/SpifftacularBrainiacs/BackEndWorkspace/spifftacular-back-end/src/test/resources
+2018-11-27 22:39:25,886 [Worker-67: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-11-27 22:39:25,888 [Worker-67: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-11-27 22:39:25,890 [Worker-67: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-11-27 22:39:25,892 [Worker-67: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-11-27 22:39:25,892 [Worker-67: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/gregorycotterell/Desktop/SpifftacularBrainiacs/BackEndWorkspace/spifftacular-back-end/src/test/resources
+2018-11-27 22:49:48,628 [Worker-67: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-11-27 22:49:48,630 [Worker-67: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-11-27 22:49:48,634 [Worker-67: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-11-27 22:49:48,636 [Worker-67: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-11-27 22:49:48,637 [Worker-67: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/gregorycotterell/Desktop/SpifftacularBrainiacs/BackEndWorkspace/spifftacular-back-end/src/test/resources

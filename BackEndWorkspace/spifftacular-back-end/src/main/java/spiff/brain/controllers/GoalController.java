@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,6 +19,7 @@ import spiff.brain.models.Goals;
 import spiff.brain.services.GoalService;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("goals")
 public class GoalController {
 	
@@ -44,6 +46,7 @@ public class GoalController {
 		}
 	}
 	
+	@CrossOrigin(origins = "http://localhost:4200")
 	@GetMapping("finance/{id}")
 	public ResponseEntity<List<Goals>> getGoalByFinanceId(@PathVariable int id) {
 		List<Goals> list = goalService.getGoalsByFinanceId(id);

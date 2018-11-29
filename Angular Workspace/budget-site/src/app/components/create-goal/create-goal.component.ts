@@ -8,10 +8,10 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./create-goal.component.css']
 })
 export class CreateGoalComponent implements OnInit {
-  enteredItem = '';
-  enteredCost: number;
-  enteredStartDate = '';
-  enteredEndDate = '';
+  itemName = '';
+  cost: number;
+  startDate = '';
+  achievedDate = '';
 
   constructor(private goalService: GoalService) { }
 
@@ -22,17 +22,17 @@ export class CreateGoalComponent implements OnInit {
     if (form.invalid) {
       return;
     }
-    this.goalService.addPost(
-      this.enteredItem = form.value.item,
-      this.enteredCost = form.value.cost,
-      this.enteredStartDate = form.value.enteredStartDate,
-      this.enteredEndDate = form.value.enteredEndDate);
-    console.log(
-      this.enteredItem,
-      this.enteredCost,
-      this.enteredEndDate,
-      this.enteredStartDate
-    );
+    const goal = {
+      itemName: form.value.item,
+      cost: form.value.cost,
+      startDate: form.value.enteredStartDate,
+      achievedDate: form.value.enteredEndDate
+    };
+
+
+    this.goalService.addGoal(goal);
+
+    console.log(goal);
 
     form.resetForm();
   }

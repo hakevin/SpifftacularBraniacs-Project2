@@ -10,14 +10,14 @@ import { Goal } from 'src/app/models/goal.model';
   styleUrls: ['./goal.component.css']
 })
 export class GoalComponent implements OnInit {
-
-  goals: Goal[] = [];
+  goal = this.goalService.goal;
+  goals: Goal[];
   goalsSub: Subscription;
   constructor(private goalService: GoalService) { }
 
   ngOnInit() {
-    this.goals = this.goalService.getGoals();
-    this.goalsSub = this.goalService.getPostUpdateListener()
+    this.goalService.getGoals();
+    this.goalsSub = this.goalService.getGoalUpdateListener()
       .subscribe((goals: Goal[]) => {
         this.goals = goals;
       });

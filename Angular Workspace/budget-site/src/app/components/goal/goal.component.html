@@ -1,3 +1,21 @@
-<p>
-  goal works!
-</p>
+<div *ngFor="let goal of goal">
+  <ul>
+    <li>
+      <p>Goal: {{ this.goal.itemName}}</p>
+    </li>
+    <li>
+      <p>{{ this.goal.cost | currency: '$'}}</p>
+    </li>
+    <li>
+      <p>Date started: {{ this.goal.startDate | date}}</p>
+    </li>
+    <li>
+      <p>Date to achieve: {{ this.goal.achievedDate | date}}</p>
+    </li>
+  </ul>
+
+
+
+
+</div>
+<h4></h4>
