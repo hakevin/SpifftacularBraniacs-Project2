@@ -1,0 +1,27 @@
+package spiff.brain.repositories;
+
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import spiff.brain.models.Goals;
+
+public class GoalRepository {
+
+	SessionFactory sf;
+	
+	public void save(Goals goal) {
+		sf.getCurrentSession().saveOrUpdate(goal);
+	}
+
+	public Goals getGoalById(int id) {
+		return sf.getCurrentSession().get(Goals.class, id);
+	}
+
+	@Autowired
+	public GoalRepository(SessionFactory sf) {
+		super();
+		this.sf = sf;
+	}
+
+	
+}

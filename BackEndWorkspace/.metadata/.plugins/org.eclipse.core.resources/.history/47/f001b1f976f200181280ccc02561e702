@@ -1,0 +1,47 @@
+package spiff.brain.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import spiff.brain.models.Expenditures;
+import spiff.brain.repositories.ExpenditureRepository;
+
+@Service
+public class ExpenditureService {
+	
+	ExpenditureRepository expenditureRepository;
+
+	@Autowired
+	public ExpenditureService(ExpenditureRepository expenditureRepository) {
+		super();
+		this.expenditureRepository = expenditureRepository;
+	}
+
+	public void addExpenditure(Expenditures expenditure) {
+		// TODO Auto-generated method stub
+		expenditureRepository.addExpenditure(expenditure);
+	}
+
+	public Expenditures getExpenditureById(int id) {
+		return expenditureRepository.getExpenditureById(id);
+	}
+
+	public List<Expenditures> getExpenditureByFinanceId(int id) {
+		return expenditureRepository.getExpenditureByFinanceId(id);
+	}
+
+	public void updateExpenditure(Expenditures expenditure, int id) {
+		Expenditures expenditureToChange = getExpenditureById(id);
+		if(expenditureToChange != null) {
+			expenditureToChange = expenditure;
+			expenditureToChange.setId(id);
+			expenditureRepository.update(expenditure);
+		}
+	}
+	
+	public void deleteExpenditure(int id) {
+		expenditureRepository.update(id);
+	}
+}

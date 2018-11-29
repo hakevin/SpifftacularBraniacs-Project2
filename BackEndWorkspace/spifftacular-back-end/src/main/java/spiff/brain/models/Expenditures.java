@@ -21,8 +21,8 @@ public class Expenditures {
 	
 	@Column(name="type")
 	private String expenditureType;
-	@Column(name="monthly_max")
-	private double monthlyMax;
+	@Column(name="monthly_cost")
+	private double monthlyCost;
 	@Column(name="deprecated")
 	private boolean deprecated;
 	public int getId() {
@@ -43,11 +43,12 @@ public class Expenditures {
 	public void setExpenditureType(String expenditureType) {
 		this.expenditureType = expenditureType;
 	}
-	public double getMonthlyMax() {
-		return monthlyMax;
+	
+	public double getMonthlyCost() {
+		return monthlyCost;
 	}
-	public void setMonthlyMax(double monthlyMax) {
-		this.monthlyMax = monthlyMax;
+	public void setMonthlyCost(double monthlyCost) {
+		this.monthlyCost = monthlyCost;
 	}
 	public boolean isDeprecated() {
 		return deprecated;
@@ -64,7 +65,7 @@ public class Expenditures {
 		result = prime * result + financeId;
 		result = prime * result + id;
 		long temp;
-		temp = Double.doubleToLongBits(monthlyMax);
+		temp = Double.doubleToLongBits(monthlyCost);
 		result = prime * result + (int) (temp ^ (temp >>> 32));
 		return result;
 	}
@@ -88,33 +89,22 @@ public class Expenditures {
 			return false;
 		if (id != other.id)
 			return false;
-		if (Double.doubleToLongBits(monthlyMax) != Double.doubleToLongBits(other.monthlyMax))
+		if (Double.doubleToLongBits(monthlyCost) != Double.doubleToLongBits(other.monthlyCost))
 			return false;
 		return true;
 	}
-	@Override
-	public String toString() {
-		return "Expenditures [id=" + id + ", financeId=" + financeId + ", expenditureType=" + expenditureType
-				+ ", monthlyMax=" + monthlyMax + ", deprecated=" + deprecated + "]";
-	}
-	public Expenditures(int id, int financeId, String expenditureType, double monthlyMax, boolean deprecated) {
+	public Expenditures(int id, int financeId, String expenditureType, double monthlyCost, boolean deprecated) {
 		super();
 		this.id = id;
 		this.financeId = financeId;
 		this.expenditureType = expenditureType;
-		this.monthlyMax = monthlyMax;
-		this.deprecated = deprecated;
-	}
-	public Expenditures(int financeId, String expenditureType, double monthlyMax, boolean deprecated) {
-		super();
-		this.financeId = financeId;
-		this.expenditureType = expenditureType;
-		this.monthlyMax = monthlyMax;
+		this.monthlyCost = monthlyCost;
 		this.deprecated = deprecated;
 	}
 	public Expenditures() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
 	
 }

@@ -24,10 +24,21 @@ public class UserService {
 		 userRepository.save(user);
 	}
 
+<<<<<<< HEAD
 	public void checkCredentials(Credentials credentials) {
 //		User user = (UserRepository.GetByUsername(credentials.getUsername()));
 //		BCrypt.checkpw(credentials.getPassword(), user.getPassword());
 		
+=======
+	public User checkCredentials(User user) {
+		User userTo = userRepository.getUserByUsername(user.getUsername());
+		if(userTo != null) {
+			if(BCrypt.checkpw(user.getPassword(), userTo.getPassword()))
+					return userTo;
+			} else 
+			return null;
+		return null;
+>>>>>>> 575ce6c68973428b6f23c93286230cd7c4b266c7
 	}
 	
 	

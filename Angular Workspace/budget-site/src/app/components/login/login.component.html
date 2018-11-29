@@ -1,15 +1,26 @@
-<app-login>
-<div id="loginBox">
-  <div>
-    <label>USERNAME:</label>
-    <input [(ngModel)]="userValue" type="text" id="userIn">
-  </div>
-  <div>
-    <label>PASSWORD:</label>
-    <input [(ngModel)]="passValue" type="password" id="passIn">
-  </div>
-  <div id='button'> 
-    <button (click)="submit()" >Login</button> 
-</div>
-</div>
-</app-login>
+<section>
+  <form>
+    <div class="container">
+      <div class="row">
+        <!-- md device is a standard laptop -->
+        <!-- sm is a tablet -->
+        <!-- xs is a phone -->
+        <div class="col-md-4 col-sm-2 col-xs-0"></div>
+        <div id="centered-content" class="col-md-4 col-sm-8 col-xs-12">
+          <h1>Reimbursement Login</h1>
+          <label for="username">Username:</label>
+          <input [(ngModel)]="username" type="text" id="username" name="username">
+          <label for="password">Password:</label>
+          <input [(ngModel)]="password" type="password" id="password" name="password">
+          <button (click)="submit()" class="btn btn-primary">Login</button>
+        </div>
+        <div class="col-md-4 col-sm-2 col-xs-0"></div>
+      </div>
+    </div>
+  </form>
+</section>
+<ol>
+  <li routerLink="/dashboard">User Dashboard</li>
+</ol>
+
+<router-outlet></router-outlet>

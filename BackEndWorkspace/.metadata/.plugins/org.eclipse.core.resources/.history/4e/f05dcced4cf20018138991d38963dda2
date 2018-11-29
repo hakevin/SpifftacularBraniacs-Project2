@@ -1,0 +1,13 @@
+package spiff.brain.repositories;
+
+import spiff.brain.models.Goals;
+
+public class GoalRepository {
+
+	SessionFactory sf;
+	
+	public void save(Goals goal) {
+		
+	}
+	
+}

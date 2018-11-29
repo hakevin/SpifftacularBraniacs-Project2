@@ -1,6 +1,0 @@
-package spiff.brain.services;
-
-@Service
-public class UserService {
-
-}
