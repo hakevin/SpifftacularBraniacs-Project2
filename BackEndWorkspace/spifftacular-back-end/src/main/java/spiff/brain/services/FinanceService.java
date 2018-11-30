@@ -14,7 +14,8 @@ public class FinanceService {
 	FinanceRepository financeRepository;
 	
 	public void save(Finances finance) {
-		financeRepository.save(finance);
+		if(getFinanceById(finance.getUserId()) == null)
+			financeRepository.save(finance);
 	}
 	
 	public Finances getFinanceById(int id) {
@@ -29,6 +30,7 @@ public class FinanceService {
 
 	public void updateFinance(int id, FinanceUpdate finance) {
 		Finances finances = getFinanceById(id);
+		System.out.println(finances);
 		finances.setWage(finance.getWage());
 		financeRepository.update(finances);
 	}

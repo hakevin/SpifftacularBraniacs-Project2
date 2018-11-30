@@ -9,8 +9,7 @@ import { FinanceService } from 'src/app/services/budget/finance.service';
 export class FinanceChartComponent implements OnInit {
 
   public lineChartData: Array<any>;
-  public lineChartLabels: Array<any> = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August',
-                                        'September', 'October', 'November', 'December'];
+  public lineChartLabels: Array<any> = new Array<any>();
   public lineChartOptions: any = {
     responsive: true
   };
@@ -42,7 +41,7 @@ export class FinanceChartComponent implements OnInit {
     }
   ];
   public lineChartLegend = true;
-  public lineChartType = 'radar';
+  public lineChartType = 'pie';
 
   constructor(private financeService: FinanceService) {
     this.lineChartData = [
@@ -59,19 +58,12 @@ export class FinanceChartComponent implements OnInit {
   public randomize(): void {
     let _lineChartData: Array<any> = new Array<any>();
     for ( let i = 0; i < this.financeService.expenditure.length; i++) {
-      let arrayTemp: Array<any> = new Array<any>();
-        for (let j = 0; j < 12; j++) {
-            arrayTemp.push(this.financeService.expenditure[i].monthlyCost);
-        }
-        let tmp = { 'data': arrayTemp, 'label': this.financeService.expenditure[i].expenditureType};
+        let tmp = { 'data': [this.financeService.expenditure[i].monthlyCost], 'label': this.financeService.expenditure[i].expenditureType};
+        this.lineChartLabels.push(this.financeService.expenditure[i].expenditureType);
         _lineChartData.push(tmp);
     }
-    let arrayTemp: Array<any> = new Array<any>();
-    for (let i = 0; i < 12; i++) {
-      arrayTemp.push(this.financeService.wage.wage);
-      console.log(this.financeService.wage.wage);
-    }
-    let tmp = { 'data': arrayTemp, 'label': 'Monthly income'};
+    let tmp = { 'data': this.financeService.wage.wage, 'label': 'Monthly income'};
+    this.lineChartLabels.push('Monthly Income');
     _lineChartData.push(tmp);
     this.lineChartData = _lineChartData;
   }
