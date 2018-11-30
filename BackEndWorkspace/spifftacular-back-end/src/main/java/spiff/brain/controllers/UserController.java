@@ -29,8 +29,13 @@ public class UserController {
 
 
 	@PostMapping("register")
-	public void registerUser(@RequestBody User user) {
-		userService.addUser(user);
+	public ResponseEntity<Integer> registerUser(@RequestBody User user) {
+		int i = userService.addUser(user);
+		if(i > 0) {
+			return new ResponseEntity<>(i, HttpStatus.CREATED);
+		} else {
+			return new ResponseEntity<>(i, HttpStatus.NOT_ACCEPTABLE);
+		}
 	}
 	
 	@PostMapping("login")

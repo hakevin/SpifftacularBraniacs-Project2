@@ -18,9 +18,14 @@ public class UserService {
 		this.userRepository = userRepository;
 	}
 
-	public void addUser(User user) {
-		user.setPassword(BCrypt.hashpw(user.getPassword(), BCrypt.gensalt()));
-		 userRepository.save(user);
+	public int addUser(User user) {
+		User userTo = userRepository.getUserByUsername(user.getUsername());
+		if(userTo == null) {
+			user.setPassword(BCrypt.hashpw(user.getPassword(), BCrypt.gensalt()));
+		 	userRepository.save(user);
+		 	return 1;
+		} else
+			return -1;
 	}
 
 	public User checkCredentials(User user) {

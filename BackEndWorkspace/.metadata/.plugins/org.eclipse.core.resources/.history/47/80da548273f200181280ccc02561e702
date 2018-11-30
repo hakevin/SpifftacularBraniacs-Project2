@@ -1,6 +1,0 @@
-package spiff.brain.controllers;
-
-@RestController
-public class ExpenditureController {
-	
-}

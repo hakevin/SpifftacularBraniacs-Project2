@@ -37,5 +37,4 @@ public class ExpenditureRepository {
 		sf.getCurrentSession().merge(expenditure);
 		sf.getCurrentSession().getTransaction().commit();
 	}
-	
 }
