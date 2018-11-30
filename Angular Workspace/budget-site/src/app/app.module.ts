@@ -16,6 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { InvestmentsService } from './services/investments.service';
 import { CreateGoalComponent } from './components/create-goal/create-goal.component';
 import { TopnavComponent } from './components/topnav/topnav.component';
+import { ChartsModule } from 'ng2-charts';
+import { FinanceChartComponent } from './components/finance-chart/finance-chart/finance-chart.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ import { TopnavComponent } from './components/topnav/topnav.component';
     InvestmentComponent,
     SidenavComponent,
     CreateGoalComponent,
-    TopnavComponent
+    TopnavComponent,
+    FinanceChartComponent
   ],
   imports: [
     BrowserModule,
@@ -35,13 +38,15 @@ import { TopnavComponent } from './components/topnav/topnav.component';
     FormsModule,
     NgbModule,
     HttpClientModule,
+    ChartsModule,
     RouterModule.forRoot([
       { path: '', component: LoginComponent },
       { path: 'register', component: RegisterComponent },
       { path: 'dashboard', component: DashboardComponent },
       { path: 'goals', component: GoalComponent },
       { path: 'invest', component: InvestmentComponent },
-      { path: 'createGoal', component: CreateGoalComponent }
+      { path: 'createGoal', component: CreateGoalComponent },
+      { path: 'finance', component: FinanceChartComponent}
     ])
   ],
   providers: [InvestmentsService],

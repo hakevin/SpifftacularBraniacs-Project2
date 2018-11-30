@@ -7,6 +7,7 @@ import { InvestmentComponent } from './components/investment/investment.componen
 import { RegisterComponent } from './components/register/register.component';
 import { GoalComponent } from './components/goal/goal.component';
 import { CreateGoalComponent } from './components/create-goal/create-goal.component';
+import { FinanceChartComponent } from './components/finance-chart/finance-chart/finance-chart.component';
 
 const routes: Routes = [{
   component: LoginComponent,
@@ -26,6 +27,9 @@ const routes: Routes = [{
 }, {
   component: CreateGoalComponent,
   path: 'createGoal'
+}, {
+  component: FinanceChartComponent,
+  path: 'finance'
 }];
 
 @NgModule({

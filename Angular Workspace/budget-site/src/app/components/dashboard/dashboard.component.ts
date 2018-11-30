@@ -3,6 +3,7 @@ import { FinanceService } from 'src/app/services/budget/finance.service';
 import { NgForm } from '@angular/forms';
 import { GoalService } from 'src/app/services/goals/goal.service';
 import { LoginService } from 'src/app/services/login.service';
+import { UserDataService } from 'src/app/services/user-data.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -17,12 +18,10 @@ export class DashboardComponent implements OnInit {
   constructor(
     public financeService: FinanceService,
     private goalService: GoalService,
-    private loginService: LoginService) { }
+    private loginService: LoginService, private userDataService: UserDataService) { }
 
   ngOnInit() {
-    this.goalService.getGoals();
     this.financeService.getWage();
-    this.financeService.getType();
   }
 
   onWageSubmit(form: NgForm) {
@@ -48,4 +47,5 @@ export class DashboardComponent implements OnInit {
 
     form.resetForm();
   }
+
 }

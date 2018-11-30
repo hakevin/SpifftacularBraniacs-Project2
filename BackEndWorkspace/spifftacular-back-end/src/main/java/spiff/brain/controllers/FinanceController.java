@@ -23,13 +23,11 @@ public class FinanceController {
 	
 	FinanceService financeService;
 	
-	@CrossOrigin(origins = "http://localhost:4200")
 	@PostMapping("")
 	public void addFinance(@RequestBody Finances finance) {
 		financeService.save(finance);
 	}
 	
-	@CrossOrigin(origins = "http://localhost:4200")
 	@GetMapping("{id}")
 	public ResponseEntity<Finances> getFinanceById(@PathVariable int id)  {
 		Finances check = financeService.getFinanceById(id);
@@ -49,6 +47,5 @@ public class FinanceController {
 		super();
 		this.financeService = financeService;
 	}
-	
 	
 }

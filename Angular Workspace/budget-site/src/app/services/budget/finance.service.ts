@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
-import { LoginService } from '../login.service';
+import { UserDataService } from '../user-data.service';
 
 @Injectable({
   providedIn: 'root'
@@ -11,29 +11,32 @@ export class FinanceService {
   wage;
   expenditure;
 
-  constructor(private http: HttpClient, private loginService: LoginService) { }
+  constructor(private http: HttpClient, private userDataService: UserDataService) { }
 
   getWage() {
-    const id = this.loginService.user.id;
-    const url = `${environment.server}/finances/${id}`;
+    const id = this.userDataService.getData();
+    console.log(id);
+    const url = `${environment.server}/finances/${id.id}`;
     this.http.get(url)
       .subscribe((payload) => {
         console.log(payload);
         this.wage = payload;
         console.log(this.wage);
+        this.getType();
         return this.wage;
       },
         (error) => console.log(error));
   }
 
   getType() {
-    const id = this.loginService.user.id;
-    const url = `${environment.server}/expenditures/finance/${id}`;
+    const url = `${environment.server}/expenditures/finance/${this.wage.id}`;
+    console.log(this.wage.id);
     this.http.get(url)
       .subscribe((payload) => {
         console.log(payload);
         this.expenditure = payload;
         console.log(this.expenditure);
+        this.userDataService.setExpenditures(this.expenditure);
         return this.expenditure;
       },
         (error) => console.log(error));
